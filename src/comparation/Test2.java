@@ -62,6 +62,8 @@ class Employee
         }
 //        return this.id - anotherEmp.id;
 //        if (this.name !=)
+
+
 //        int res = this.name.compareTo(anotherEmp.name);
 //        if (res == 0){
 //            res = this.surname.compareTo(anotherEmp.surname);
