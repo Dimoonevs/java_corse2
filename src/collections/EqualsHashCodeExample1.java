@@ -27,7 +27,7 @@ public class EqualsHashCodeExample1 {
 
     }
 }
-class StudentEqualsHashCode{
+class StudentEqualsHashCode implements Comparable<StudentEqualsHashCode>{
     String name;
     String surname;
     Integer course;
@@ -58,5 +58,14 @@ class StudentEqualsHashCode{
     @Override
     public int hashCode() {
         return Objects.hash(name, surname, course);
+    }
+
+    @Override
+    public int compareTo(StudentEqualsHashCode o) {
+        int res = this.course - o.course;
+        if (res == 0){
+            res = this.name.compareTo(o.name);
+        }
+        return res;
     }
 }
